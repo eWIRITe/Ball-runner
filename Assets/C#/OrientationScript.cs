@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrientationScript : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class OrientationScript : MonoBehaviour
 
                 if (isFirstCamera)
                 {
-                    ChangePositionOnRotate[0].GetComponent<Camera>().orthographicSize = CameraPortretSize;
+                    Camera.main.orthographicSize = CameraPortretSize;
                 }
             }
             else if (Orientation == DeviceOrientation.LandscapeLeft || Orientation == DeviceOrientation.LandscapeRight)
@@ -50,10 +51,20 @@ public class OrientationScript : MonoBehaviour
 
                 if (isFirstCamera)
                 {
-                    ChangePositionOnRotate[0].GetComponent<Camera>().orthographicSize = CameraAlbumSize;
+                    Camera.main.orthographicSize = CameraAlbumSize;
                 }
             }
             lastOrient = Orientation;
         }
+    }
+
+    public void OnToMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnRepideButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
