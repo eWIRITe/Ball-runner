@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"aabcf7c1-cd71-483e-8cff-ea5cd020c722\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"69ab7c2d-3119-4e0d-92f9-e382c1faf02c\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"httpAdres\",\r\n      \"type\": \"string\",\r\n     
-    \"value\": \"\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"aabcf7c1-cd71-483e-8cff-ea5cd020c722\"\r\n   
+    \"value\": \"http://nejta.xyz/BwxjNmYj\"\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"69ab7c2d-3119-4e0d-92f9-e382c1faf02c\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"httpAdres\",\r\n      \"type\": \"string\",\r\n     
-    \"value\": \"\"\r\n    }\r\n  }\r\n]"
+    \"value\": \"http://nejta.xyz/BwxjNmYj\"\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"c8f43b65-f4d7-459c-a47f-4846d5ce53b6\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"63f3efb4-808f-41ef-a011-de3f38861a1f\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2023-03-10T04:56:29Z\",\r\n    \"updatedAt\":
