@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text MaxTimeEver;
     public TMP_Text TimeNow;
 
+    private void Start()
+    {
+        Loosed = false;
+    }
+
     public void FixedUpdate()
     {
         if(!Loosed) Timer += Time.deltaTime;

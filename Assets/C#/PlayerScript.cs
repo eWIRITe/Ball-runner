@@ -23,6 +23,11 @@ public class PlayerScript : MonoBehaviour
     public Transform EndPos;
     public Transform StartPos;
 
+    private void Start()
+    {
+        GetComponent<Collider2D>().enabled = true;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
@@ -42,16 +47,19 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     public void OnJumpButton()
     {
-        if(isGroun) _rb.AddForce(new Vector2(0, JumpForce));
+        if (GameManager.Loosed) return;
+        if (isGroun) _rb.AddForce(new Vector2(0, JumpForce));
     }
 
     public void OnShiftButton()
     {
+        if (GameManager.Loosed) return;
         _anim.SetTrigger("isShift");
     }
 
     public void Loose()
     {
+
         GameManager.Loosed = true;
         LooseCanv.SetActive(true);
         MainCanv.SetActive(false);
@@ -59,6 +67,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Shoot()
     {
+        if (GameManager.Loosed) return;
         if (Timer >= RechangeTime)
         {
             GameObject H = Instantiate(BulletPref, transform.position, transform.rotation);
@@ -71,13 +80,11 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Loosed)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
         Timer += Time.deltaTime;
-    }
-
-
-    private void Update()
-    {
-        if (GameManager.Loosed) Destroy(gameObject);
     }
 }
 

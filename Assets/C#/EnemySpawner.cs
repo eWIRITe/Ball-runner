@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Loosed) return;
+
         Timer += Time.deltaTime;
         if (Timer >= TimeToNextSpawn)
         {
@@ -23,11 +25,5 @@ public class EnemySpawner : MonoBehaviour
 
             Timer = 0;
         }
-    }
-
-
-    private void Update()
-    {
-        if (GameManager.Loosed) Destroy(gameObject);
     }
 }

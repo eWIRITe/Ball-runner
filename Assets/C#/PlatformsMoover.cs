@@ -9,6 +9,11 @@ public class PlatformsMoover : MonoBehaviour
     public Transform StartPos;
     public Transform EndPos;
 
+    private void Start()
+    {
+        Speed = 3;
+    }
+
     private void FixedUpdate()
     {
         transform.position = new Vector2(transform.position.x - Speed * Time.deltaTime, transform.position.y);
